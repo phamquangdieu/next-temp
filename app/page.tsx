@@ -5,6 +5,7 @@ export default function Home() {
     <div className="flex flex-col">
       <Link href='/glass-card'>Glass card</Link>
       <Link href='/fall-leaves'>Fall leaves</Link>
+      <Link href='/heart-move'>Heart Move</Link>
     </div>
   );
 }
