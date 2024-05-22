@@ -77,8 +77,12 @@
 }
 
 .set3 {
-    transform: scale(0.8) rotateY(180deg);
+    transform: rotateY(180deg);
     filter: blur(4px);
+}
+
+.set3 img {
+    transform: scale(.8) 
 }
 
 @keyframes animation-fall {
