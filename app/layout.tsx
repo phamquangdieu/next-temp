@@ -17,9 +17,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {/* <Script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></Script>
+      <Script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></Script>
       <Script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></Script>
-      <Script src="/test.js" type="text/javascript"></Script> */}
+      {/* <Script src="/test.js" type="text/javascript"></Script> */}
+      <Script src="/test2.js" type="text/javascript"></Script> 
       <body className={inter.className}>{children}</body>
     </html>
   );
