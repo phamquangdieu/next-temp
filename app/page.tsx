@@ -8,6 +8,8 @@ export default function Home() {
       <Link href='/heart-move'>Heart Move</Link>
       <Link href='/horizontal-scroll'>Horizontal</Link>
       <Link href='/horizontal-scroll-2'>Horizontal 2</Link>
+      <Link href='/menu-scroll'>Menu scroll</Link>
+      <Link href='/split-text'>Split Text</Link>
     </div>
   );
 }
