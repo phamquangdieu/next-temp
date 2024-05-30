@@ -29,9 +29,9 @@ const Obeserver1 = () => {
         
         // gsap.set(outerWrappers, { xPercent: 100 });
         // gsap.set(innerWrappers, { xPercent: -100 });
-        
-        // gsap.set(".slide:nth-of-type(1) .slide_outer", { xPercent: 0 });
-        // gsap.set(".slide:nth-of-type(1) .slide_inner", { xPercent: 0 });
+
+        // gsap.set(`.${styles.slide}:nth-of-type(1) .${styles.slide_outer}`, { xPercent: 0 });
+        // gsap.set(`.${styles.slide}:nth-of-type(1) .${styles.slide_inner}`, { xPercent: 0 });
         
         function gotoSection(index: number, direction: number) {
             
