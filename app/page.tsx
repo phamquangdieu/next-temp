@@ -10,6 +10,8 @@ export default function Home() {
       <Link href='/horizontal-scroll-2'>Horizontal 2</Link>
       <Link href='/menu-scroll'>Menu scroll</Link>
       <Link href='/split-text'>Split Text</Link>
+      <Link href='/observer-1'>Observer 1</Link>
+      <Link href='/observer-2'>Observer 2</Link>
     </div>
   );
 }
