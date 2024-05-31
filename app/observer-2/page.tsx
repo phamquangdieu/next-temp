@@ -4,10 +4,9 @@ import styles from './styles.module.css'
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { Observer } from 'gsap/Observer';
-// import { SplitText } from 'gsap/SplitText';
-import { SplitText } from 'gsap-trial/SplitText';
+import SplitType from 'split-type'
 
-gsap.registerPlugin(Observer, SplitText);
+gsap.registerPlugin(Observer);
 
 const Observer2 = () => {
     const ref = useRef<HTMLDivElement>(null);
@@ -18,7 +17,7 @@ const Observer2 = () => {
         headings : HTMLDivElement[] = gsap.utils.toArray(".section-heading"),
         outerWrappers = gsap.utils.toArray(`.${styles.outer}`),
         innerWrappers = gsap.utils.toArray(`.${styles.inner}`),
-        splitHeadings = headings.map(heading => new SplitText(heading, { type: "chars,words,lines", linesClass: "clip-text" })),
+        splitHeadings = headings.map(heading => new SplitType(heading, { types: "chars,words,lines", lineClass: "clip-text" })),
         currentIndex = -1,
         wrap = gsap.utils.wrap(0, sections.length),
         animating: boolean;

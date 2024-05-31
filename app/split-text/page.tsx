@@ -1,11 +1,12 @@
 'use client';
 import { useGSAP } from '@gsap/react';
-import gsap from 'gsap-trial';
-import { SplitText } from 'gsap-trial/SplitText';
+import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import React, { useRef } from 'react'
+import SplitType from 'split-type'
 
-gsap.registerPlugin(ScrollTrigger, SplitText);
+
+gsap.registerPlugin(ScrollTrigger);
 
 // const myTexts = new SplitText('.text-test', { type: 'chars'});
 // const chars = myTexts.chars;
@@ -16,7 +17,7 @@ const SpitText = () => {
     
     useGSAP(() => {
         
-        var split = new SplitText(".text-test", {type: "chars"});
+        var split = new SplitType(".text-test", {types: "chars"});
         
         gsap.set(split.chars, { yPercent: 100 })
         //now animate each character into place from 100px above, fading in:
@@ -59,10 +60,11 @@ const SpitText = () => {
         <>
         <div className='h-[100vh]'>
             <div className='container flex text-center justify-center' ref={ref}>
-                <div className='text-test uppercase text-[4rem] font-bold p-10 invisible'>Hello world!!</div>
-            </div>
-            <div className='container flex text-center justify-center' ref={ref}>
-                <div className='text-test uppercase text-[4rem] font-bold p-10 invisible'>Hello world!!</div>
+                <div
+                    style={{ fontFamily: 'sans-serif', 'WebkitTextFillColor': 'transparent', 'WebkitTextStrokeColor': '#8b7a27', 'WebkitTextStrokeWidth': 2}}
+                    className='text-[#8b7a27] text-test uppercase text-[4rem] font-bold p-10 invisible fill'>
+                    Hello world!!
+                </div>
             </div>
         </div>
         <div className='h-[100vh]'>hello</div>
