@@ -12,6 +12,8 @@ export default function Home() {
       <Link href='/split-text'>Split Text</Link>
       <Link href='/observer-1'>Observer 1</Link>
       <Link href='/observer-2'>Observer 2</Link>
+      <Link href='/timeline-1'>Timeline 1</Link>
+      <Link href='/opener-text'>Opener Text</Link>
     </div>
   );
 }

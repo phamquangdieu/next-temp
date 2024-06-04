@@ -4,6 +4,9 @@ import gsap from 'gsap';
 import React, { useRef } from 'react'
 import styles from './styles.module.css'
 import SplitType from 'split-type';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const hello  = document.querySelector(`.${styles.hello}`)
 gsap.set(hello, { autoAlpha: 0})
@@ -80,22 +83,21 @@ const Timeline1 = () => {
         //     .fromTo(bar, {xPercent: 100}, {xPercent: 0, delay: 0.3, opacity: 1})
         
     }, { scope: ref});
-    const rest = {hello: ''}
     return (
-        <div ref={ref} className={styles.container}>
-            <div className='part'>
-                <div className={styles.hello} {...rest}>Hello</div>
+            <div ref={ref} className={styles.container1}>
+                <div className='part'>
+                    <div className={styles.hello}>Hello</div>
+                </div>
+                <div className={styles.partRight}>
+                    <div className={styles.world}>world</div>
+                </div>
+                <div className='part'>
+                    <div className={styles.foo}>Foo</div>
+                </div>
+                <div className={styles.partRight}>
+                    <div className={styles.bar}>Bar</div>
+                </div>
             </div>
-            <div className={styles.partRight}>
-                <div className={styles.world}>world</div>
-            </div>
-            <div className='part'>
-                <div className={styles.foo}>Foo</div>
-            </div>
-            <div className={styles.partRight}>
-                <div className={styles.bar}>Bar</div>
-            </div>
-        </div>
     );
 }
  
