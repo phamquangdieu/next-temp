@@ -26,10 +26,11 @@ const Timeline1 = () => {
                 autoAlpha: 1,
                 x: 100,
                 duration: 1,
+                delay: 0.5,
                 ease: "power2",
                 stagger: {
-                each: 0.02,
-                from: "end"
+                    each: 0.02,
+                    from: "end"
                 }
             }, 0.5)
             .fromTo(
@@ -70,7 +71,7 @@ const Timeline1 = () => {
                         each: 0.02,
                         from: "start"
                     }
-                }, 1.5)
+                }, 1)
             
         // tl
         //     .to(hello, { x: 100, opacity: 1, delay: 0.3})
@@ -79,10 +80,11 @@ const Timeline1 = () => {
         //     .fromTo(bar, {xPercent: 100}, {xPercent: 0, delay: 0.3, opacity: 1})
         
     }, { scope: ref});
+    const rest = {hello: ''}
     return (
         <div ref={ref} className={styles.container}>
             <div className='part'>
-                <div className={styles.hello}>Hello</div>
+                <div className={styles.hello} {...rest}>Hello</div>
             </div>
             <div className={styles.partRight}>
                 <div className={styles.world}>world</div>
