@@ -32,7 +32,7 @@ const Openertext = () => {
         <div ref={ref}>
             <div className={styles.container3}>Test</div>
             <div className={styles.container}>
-                <div className='flex flex-col absolute top-0 h-full w-full bg-yellow-400'>
+                <div className='flex flex-col absolute top-0 h-full w-full bg-yellow-400 overflow-hidden'>
                     <div className='t2 flex-1 relative overflow-hidden bg-white z-50'>
                         <div className={styles.top}>
                             <div className={styles.topText}>
@@ -48,7 +48,7 @@ const Openertext = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='absolute back-content top-0 z-1'>
+                    <div className='absolute back-content  top-0 z-1'>
                        <div className={styles.content}>12331231</div>
                     </div>
                 </div>
