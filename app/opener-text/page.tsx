@@ -30,7 +30,7 @@ const Openertext = () => {
     }, { scope: ref});
     return (
         <div ref={ref}>
-            <div className={styles.container3}>Test</div>
+            {/* <div className={styles.container3}>Test</div> */}
             <div className={styles.container}>
                 <div className='flex flex-col absolute top-0 h-full w-full bg-yellow-400 overflow-hidden'>
                     <div className='t2 flex-1 relative overflow-hidden bg-white z-50'>
