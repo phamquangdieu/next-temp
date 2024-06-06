@@ -8,10 +8,13 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const hello  = document.querySelector(`.${styles.hello}`)
-gsap.set(hello, { autoAlpha: 0})
+
 const Timeline1 = () => {
     const ref = useRef<HTMLDivElement>(null);
+    // if (typeof document !== undefined) {
+    //     const hello  = document.querySelector(`.${styles.hello}`)
+    //     gsap.set(hello, { autoAlpha: 0})
+    // }
     useGSAP(() => {
         const hello  = document.querySelector(`.${styles.hello}`)
         const tmpHello = new SplitType(`.${styles.hello}`, { types: 'chars'})
