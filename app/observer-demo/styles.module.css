@@ -1,0 +1,54 @@
+.container {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.outer, .inner {
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.container .slide {
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+
+    position: fixed;
+    top: 0;
+}
+
+.bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-size: cover;;
+}
+
+.first .bg {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.6) 0%,
+        rgba(0, 0, 0, 0.3) 100%
+      ),
+      url(https://images.unsplash.com/photo-1617478755490-e21232a5eeaf?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxNzU1NjM5NA&ixlib=rb-1.2.1&q=75&w=1920);
+}
+
+.second .bg {
+    background-image: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.6) 0%,
+        rgba(0, 0, 0, 0.3) 100%
+      ),
+      url("https://images.unsplash.com/photo-1617128734662-66da6c1d3505?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxNzc3NTM3MA&ixlib=rb-1.2.1&q=75&w=1920");
+}
+
+.third .bg {
+    background: radial-gradient(circle at 30%, #333, #0c24ba);
+}

@@ -76,7 +76,7 @@ export default function RootLayout({
       {/* <Script src="/test2.js" type="text/javascript"></Script>  */}
       <body className={inter.className}>
         {children}
-        <div className="bg-blue-900 text-white p-12">
+        {/* <div className="bg-blue-900 text-white p-12">
           <Row gutter={[32, 32]}>
             {data.map(item => (
               <Col span={6} key={item.link}>
@@ -84,7 +84,7 @@ export default function RootLayout({
               </Col>
             ))}
           </Row>
-        </div>
+        </div> */}
       </body>
     </html>
   );

@@ -129,24 +129,23 @@ const Obeserver1 = () => {
         }
         
         Observer.create({
-         type: "wheel,touch,pointer",
-         preventDefault: true,
-         wheelSpeed: -1,
-         onUp: () => {
-          if (animating) return;
-          gotoSection(currentIndex + 1, +1);
-         },
-         onDown: () => {
-          if (animating) return;
-          gotoSection(currentIndex - 1, -1);
-         },
-         tolerance: 10
+            type: "wheel,touch,pointer",
+            preventDefault: true,
+            wheelSpeed: -1,
+            onUp: () => {
+            if (animating) return;
+            gotoSection(currentIndex + 1, +1);
+            },
+            onDown: () => {
+            if (animating) return;
+            gotoSection(currentIndex - 1, -1);
+            },
+            tolerance: 10
         });
         
         document.addEventListener("keydown", logKey);
         
         function logKey(e: KeyboardEvent) {
-         console.log(e.code);
          if ((e.code === "ArrowUp" || e.code === "ArrowLeft") && !animating) {
           gotoSection(currentIndex - 1, -1);
          }

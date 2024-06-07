@@ -11,10 +11,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Timeline1 = () => {
     const ref = useRef<HTMLDivElement>(null);
-    // if (typeof document !== undefined) {
-    //     const hello  = document.querySelector(`.${styles.hello}`)
-    //     gsap.set(hello, { autoAlpha: 0})
-    // }
     useGSAP(() => {
         const hello  = document.querySelector(`.${styles.hello}`)
         const tmpHello = new SplitType(`.${styles.hello}`, { types: 'chars'})
@@ -78,12 +74,6 @@ const Timeline1 = () => {
                         from: "start"
                     }
                 }, 1)
-            
-        // tl
-        //     .to(hello, { x: 100, opacity: 1, delay: 0.3})
-        //     .fromTo(world, {xPercent: 100}, {xPercent: 0, delay: 0.2, opacity: 1})
-        //     .to(foo, { x: 100, opacity: 1, delay: 0.2})
-        //     .fromTo(bar, {xPercent: 100}, {xPercent: 0, delay: 0.3, opacity: 1})
         
     }, { scope: ref});
     return (
