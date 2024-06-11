@@ -1,0 +1,107 @@
+/* ////////////////////////////////////////////////
+ *  Marquee
+ * //////////////////////////////////////////////// */
+
+ .container img {
+    width: 600px !important;
+    max-width: unset;
+ }
+ .marquee {
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .marqueeInner {
+    display: inline-flex;
+    position: relative;
+    white-space: nowrap;
+  }
+  
+  .marqueeItem {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: var(--space-lg);
+  }
+  
+
+
+
+  
+  .wrapper{
+    height:100vh;
+    width:200px;
+    position:relative;
+    background:#ccc;
+    overflow:hidden;
+    display: flex;
+
+  }
+  
+  /* .wrapper::after {
+    height:448px;
+    width:200px;
+    content:"";
+    position:absolute;
+    border:solid 1px white;
+  } */
+  
+  .box, .box2{
+    height:200px;
+    width:200px;
+    position:absolute;
+    background:red;
+    font-size:25px;
+    line-height:50px;
+    text-align:center;
+    
+    border: 4px solid white;
+  }
+
+
+  .box img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    
+
+  }
+  .box2 img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+
+  }
+
+  .layer {
+    height:200px;
+    width:200px;
+    position: absolute;
+    top: 0;
+    background-image: radial-gradient(ellipse, #0000, #0007),
+    linear-gradient(0deg, #9725, #9725);
+    filter: blur(0.05rem) saturate(0.7) contrast(1.5) brightness(1.2);
+    border: 4px solid white;
+  }
+
+  .layer:hover {
+    background-image: none;
+    filter: none;
+  }
+  
+  
+  
+  .boxes {
+    position:relative;
+    /* bottom:-50px; */
+  }
+  
+  .nav {
+    position:relative;
+    text-align:center;
+   
+    color:white;
+    font-size:20px;
+    display: flex;
+    /* margin:20px 0; */
+  }
