@@ -36,7 +36,6 @@ const SpitText = () => {
                     start: 'top top',
                     end: 0,
                     scrub: 1,
-                    markers: true
                 },
             })
         }
@@ -63,7 +62,7 @@ const SpitText = () => {
                 <div
                     style={{ fontFamily: 'sans-serif', 'WebkitTextFillColor': 'transparent', 'WebkitTextStrokeColor': '#8b7a27', 'WebkitTextStrokeWidth': 2}}
                     className='text-[#8b7a27] text-test uppercase text-[4rem] font-bold p-10 invisible fill'>
-                    Hello world!!
+                    Dieu pham
                 </div>
             </div>
         </div>
