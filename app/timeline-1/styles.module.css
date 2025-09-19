@@ -1,37 +1,36 @@
 .container1 {
-    font-size: 8vw;
-    text-transform: uppercase;
-    font-weight: bold;
-    position: relative;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #ddd;
-    height: 100vh;
-    color: #cc9018;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-fill-color: transparent;
-    text-shadow: #cc9018 6px -5px 1px;
+  font-size: 8vw;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #ddd;
+  height: 100vh;
+  color: #cc9018;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-fill-color: transparent;
+  text-shadow: #cc9018 6px -5px 1px;
 }
 .partRight {
-    position: absolute;
-    right: 0;
+  position: absolute;
+  right: 0;
 }
 .hello {
-    /* opacity: 0; */
+  /* opacity: 0; */
 }
 
 .world {
-    /* opacity: 0; */
-    right: 0;
-    text-align: right;
-    padding-right: 100px;
-    
+  /* opacity: 0; */
+  right: 0;
+  text-align: right;
+  padding-right: 100px;
 }
 .foo {
-    /* opacity: 0; */
+  /* opacity: 0; */
 }
 .bar {
-    /* opacity: 0; */
-    right: 0;
-    text-align: right;
-    padding-right: 100px;
+  /* opacity: 0; */
+  right: 0;
+  text-align: right;
+  padding-right: 100px;
 }

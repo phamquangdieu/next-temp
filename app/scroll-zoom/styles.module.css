@@ -1,38 +1,38 @@
 .container {
-    margin: 0;
-    width: 100%;
-    background-color: grey;
-    font-family: sans-serif;
-    overscroll-behavior: none;
-  }
-  .container  section {
-    position: relative;
-    height: 100vh;
-    border-bottom: 1px solid #636363;
-    width: 58%;
-  }
-  .container  h1 {
-    position: absolute;
-    top: 30px;
-    font-size: 36px;
-    line-height: 1;
-    font-family: sans-serif;
-    color: #fff;
-    margin: 0 0 0 20px;
-  }
-  .rightSide {
-    width: 40%;
-    position: fixed;
-    right: 0;
-    top: 0;
-    background: #333;
-    height: 100vh;
-    overflow: hidden;
-  }
-  .photo {
-    width: 100%;
-    height: 100%;
-    background-image: url(https://www.voicesofyouth.org/sites/voy/files/images/2020-08/finding-sunshine.jpg);
-    background-size: cover;
-    background-position: center;
-  }
+  margin: 0;
+  width: 100%;
+  background-color: grey;
+  font-family: sans-serif;
+  overscroll-behavior: none;
+}
+.container section {
+  position: relative;
+  height: 100vh;
+  border-bottom: 1px solid #636363;
+  width: 58%;
+}
+.container h1 {
+  position: absolute;
+  top: 30px;
+  font-size: 36px;
+  line-height: 1;
+  font-family: sans-serif;
+  color: #fff;
+  margin: 0 0 0 20px;
+}
+.rightSide {
+  width: 40%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background: #333;
+  height: 100vh;
+  overflow: hidden;
+}
+.photo {
+  width: 100%;
+  height: 100%;
+  background-image: url(https://www.voicesofyouth.org/sites/voy/files/images/2020-08/finding-sunshine.jpg);
+  background-size: cover;
+  background-position: center;
+}

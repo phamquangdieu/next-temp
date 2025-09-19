@@ -25,7 +25,8 @@ body {
   .text-balance {
     text-wrap: balance;
   }
-}body {
+}
+body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -57,61 +58,61 @@ body {
 }
 
 #container {
-    width: 4000px;
-    background-color:grey;
-    display:flex;
-    /* //flex-wrap:wrap;
+  width: 4000px;
+  background-color: grey;
+  display: flex;
+  /* //flex-wrap:wrap;
     //flex-direction:column;
     //height:700%;
     //width: auto; */
-  }
-  
-  .module{
-    /* //height: 100%;  */
-    height: 100vh;
-    padding: 40px;
-  }
-  
-  .dark{
-    width: 400px;
-    background-color:rgb(99, 99, 99);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-  }
-  
-  .white{
-    width: 400px;
-    /* flex: 0 0 100%; */
-    background-color:white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .blue{
-    width: 400px;
-    /* flex: 0 0 100%; */
-    background-color:blue;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  
-  .orange{
-    width: 400px;
-    /* flex: 0 0 100%; */
-    background-color:orange;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-right: 2px solid black;
-  }
+}
 
-  .module img {
-    opacity: 0.1;
-  }
+.module {
+  /* //height: 100%;  */
+  height: 100vh;
+  padding: 40px;
+}
+
+.dark {
+  width: 400px;
+  background-color: rgb(99, 99, 99);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.white {
+  width: 400px;
+  /* flex: 0 0 100%; */
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blue {
+  width: 400px;
+  /* flex: 0 0 100%; */
+  background-color: blue;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.orange {
+  width: 400px;
+  /* flex: 0 0 100%; */
+  background-color: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 2px solid black;
+}
+
+.module img {
+  opacity: 0.1;
+}
 
 .module:nth-child(odd) img {
   transform: translateY(-150px);
@@ -122,6 +123,3 @@ body {
   transform: translateY(150px);
   overflow: hidden;
 }
-
-
-

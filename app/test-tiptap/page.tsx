@@ -1,16 +1,15 @@
-'use client'
-
+'use client';
 
 // Usage in your Next.js component
-import { useEditor, EditorContent } from '@tiptap/react'
-import StarterKit from '@tiptap/starter-kit'
-import { CustomHeading } from './custom'
-import { useState, useEffect } from 'react'
-import { Markdown } from 'tiptap-markdown'
+import { useEditor, EditorContent } from '@tiptap/react';
+import StarterKit from '@tiptap/starter-kit';
+import { CustomHeading } from './custom';
+import { useState, useEffect } from 'react';
+import { Markdown } from 'tiptap-markdown';
 
 export default function MyEditor() {
-  const [markdown, setMarkdown] = useState('')
-  
+  const [markdown, setMarkdown] = useState('');
+
   const editor = useEditor({
     extensions: [
       StarterKit.configure({
@@ -25,39 +24,39 @@ export default function MyEditor() {
     ],
     content: '<p>Type ! followed by a space to create a heading!</p>',
     onUpdate: ({ editor }) => {
-        const markdown = editor.storage.markdown.getMarkdown();
+      const markdown = editor.storage.markdown.getMarkdown();
       // Convert HTML content to Markdown
-      setMarkdown(markdown)
-    }
-  })
+      setMarkdown(markdown);
+    },
+  });
 
   // Function to set heading level
   const setHeading = (level: number) => {
-    editor?.chain().focus().setHeading({ level }).run()
-  }
+    editor?.chain().focus().setHeading({ level }).run();
+  };
 
   // Function to convert to paragraph
   const setParagraph = () => {
-    editor?.chain().focus().unsetHeading().run()
-  }
+    editor?.chain().focus().unsetHeading().run();
+  };
 
   // Check if heading is active
   const isHeadingActive = (level: number) => {
-    return editor?.isActive('heading', { level }) ?? false
-  }
+    return editor?.isActive('heading', { level }) ?? false;
+  };
 
   return (
     <div className="editor-wrapper">
       <div className="editor-container">
         <div className="editor-toolbar">
-          <button 
+          <button
             onClick={() => setParagraph()}
             className={`toolbar-button ${editor?.isActive('paragraph') ? 'active' : ''}`}
           >
             Paragraph
           </button>
-          {[1, 2, 3, 4, 5, 6].map(level => (
-            <button 
+          {[1, 2, 3, 4, 5, 6].map((level) => (
+            <button
               key={level}
               onClick={() => setHeading(level)}
               className={`toolbar-button ${isHeadingActive(level) ? 'active' : ''}`}
@@ -68,12 +67,12 @@ export default function MyEditor() {
         </div>
         <EditorContent editor={editor} />
       </div>
-      
+
       <div className="markdown-preview">
         <h3>HTML Output</h3>
         <pre>{markdown}</pre>
       </div>
-      
+
       <style jsx>{`
         .editor-wrapper {
           display: flex;
@@ -129,5 +128,5 @@ export default function MyEditor() {
         }
       `}</style>
     </div>
-  )
+  );
 }

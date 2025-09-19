@@ -3,30 +3,30 @@ name: Deploy to AWS EC2
 on:
   push:
     branches:
-      - production  # Change to your deployment branch
+      - production # Change to your deployment branch
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Set up SSH Key
-      run: |
-        mkdir -p ~/.ssh
-        echo "${{ secrets.AWS_SSH_PRIVATE_KEY }}" > ~/.ssh/aws_key.pem
-        chmod 600 ~/.ssh/aws_key.pem
-        ssh-keyscan -H ${{ secrets.AWS_HOST }} >> ~/.ssh/known_hosts
+      - name: Set up SSH Key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.AWS_SSH_PRIVATE_KEY }}" > ~/.ssh/aws_key.pem
+          chmod 600 ~/.ssh/aws_key.pem
+          ssh-keyscan -H ${{ secrets.AWS_HOST }} >> ~/.ssh/known_hosts
 
-    - name: Deploy to EC2
-      run: |
-        ssh -i ~/.ssh/aws_key.pem -o StrictHostKeyChecking=no ${{ secrets.AWS_USERNAME }}@${{ secrets.AWS_HOST }} << 'EOF'
-          cd next-temp
-          git fetch
-          git reset --hard origin/production
-          npm install  # Adjust for your project
-          npm run build
-          pm2 restart all  # Restart application (if using PM2)
-        EOF
+      - name: Deploy to EC2
+        run: |
+          ssh -i ~/.ssh/aws_key.pem -o StrictHostKeyChecking=no ${{ secrets.AWS_USERNAME }}@${{ secrets.AWS_HOST }} << 'EOF'
+            cd next-temp
+            git fetch
+            git reset --hard origin/production
+            npm install  # Adjust for your project
+            npm run build
+            pm2 restart all  # Restart application (if using PM2)
+          EOF

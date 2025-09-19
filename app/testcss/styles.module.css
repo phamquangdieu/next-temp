@@ -1,53 +1,53 @@
 .drawer {
-    width: 0;
-    visibility: hidden;
-    opacity: 0;
-    background-color: white;
-    border-left: 1px solid #e5e7eb;
-    padding: 1rem;
-    height: 100%;
-    transition: all 0.3s ease;
-    transform: translateX(100%);
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: 50;
+  width: 0;
+  visibility: hidden;
+  opacity: 0;
+  background-color: white;
+  border-left: 1px solid #e5e7eb;
+  padding: 1rem;
+  height: 100%;
+  transition: all 0.3s ease;
+  transform: translateX(100%);
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 50;
 }
 
 .drawer.open {
-    width: 250px;
-    visibility: visible;
-    opacity: 1;
-    transform: translateX(0);
+  width: 250px;
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* Responsive styles for screens smaller than 800px */
 @media (max-width: 800px) {
-    .drawer {
-        width: 0;
-    }
-    
-    .drawer.open {
-        width: 100%;
-        max-width: 300px;
-    }
+  .drawer {
+    width: 0;
+  }
+
+  .drawer.open {
+    width: 100%;
+    max-width: 300px;
+  }
 }
 
 /* Overlay styles for mobile view */
 .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    z-index: 40;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 40;
 }
 
 .overlay.open {
-    opacity: 1;
-    visibility: visible;
+  opacity: 1;
+  visibility: visible;
 }

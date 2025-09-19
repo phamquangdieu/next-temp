@@ -1,6 +1,6 @@
 'use client';
 import { useGSAP } from '@gsap/react';
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react';
 import styles from './styles.module.css';
 import gsap from 'gsap';
 
@@ -12,10 +12,10 @@ import gsap from 'gsap';
 //           paused: false,
 //           speed: 1
 //         });
-        
+
 //         /*
 //         This helper function makes a group of elements animate along the x-axis in a seamless, responsive loop.
-        
+
 //         Features:
 //          - Uses xPercent so that even if the widths change (like if the window gets resized), it should still work in most cases.
 //          - When each item animates to the left or right enough, it will loop back to the other side
@@ -63,13 +63,12 @@ import gsap from 'gsap';
 //                 (Number(gsap.getProperty(el, "x", "px")) / w) * 100 +
 //                   Number(gsap.getProperty(el, "xPercent"))
 //               );
-              
-              
+
 //               return xPercents[i];
 //             }
 //           });
 //           console.log(widths, xPercents );
-          
+
 //           gsap.set(items, { x: 0 });
 //           totalWidth =
 //             items[length - 1].offsetLeft +
@@ -82,12 +81,12 @@ import gsap from 'gsap';
 //           for (i = 0; i < length; i++) {
 //             item = items[i];
 //             curX = (xPercents[i] / 100) * widths[i];
-            
+
 //             distanceToStart = item.offsetLeft + curX - startX;
 //             distanceToLoop =
 //               distanceToStart + widths[i] * Number(gsap.getProperty(item, "scaleX"));
 //               console.log(distanceToLoop, distanceToStart);
-              
+
 //             tl.to(
 //               item,
 //               {
@@ -114,10 +113,10 @@ import gsap from 'gsap';
 //               .add("label" + i, distanceToStart / pixelsPerSecond);
 //             times[i] = distanceToStart / pixelsPerSecond;
 //           }
-          
+
 //           return tl;
 //         }
-        
+
 //     }, {scope: ref})
 //     return (
 //         <div ref={ref} className={styles.container}>
@@ -147,109 +146,145 @@ import gsap from 'gsap';
 //         </div>
 //     );
 // }
- 
+
 // export default HomepageImg;
 
 const Homepage = () => {
-    const ref = useRef<HTMLDivElement>(null);
-    useGSAP(() => {
-        var colors = ["red","#6fb936", "#ccc", "#ff9500", 'lightblue'];
-        var wrap = gsap.utils.wrap(-200, 800);
+  const ref = useRef<HTMLDivElement>(null);
+  useGSAP(
+    () => {
+      var colors = ['red', '#6fb936', '#ccc', '#ff9500', 'lightblue'];
+      var wrap = gsap.utils.wrap(-200, 800);
 
-        var wrap1 = gsap.utils.wrap(-200, 800);
-        
-        //initially colorize each box and position in a row
-        gsap.set(`.${styles.box}`, {
-          backgroundColor: (i) => colors[i % colors.length],
-          y: (i) => -100 + i * -200
-        });
-        gsap.set(`.${styles.box2}`, {
-            backgroundColor: (i) => colors[i % colors.length],
-            y: (i) => i * 200
-          });
-        
-        
-        
-        gsap.to(`.${styles.box}`, {
-          duration: 15,
-          ease: "none",
-          y: "-=1000", //move each box 500px to right
-          modifiers: {
-            y: gsap.utils.unitize(wrap) //force y value to wrap when it reaches -100
-          },
-          repeat: -1
-        });
+      var wrap1 = gsap.utils.wrap(-200, 800);
 
-        gsap.to(`.${styles.box2}`, {
-            duration: 15,
-            ease: "none",
-            // delay: 2,
-            y: "+=1000", //move each box 500px to right
-            modifiers: {
-              y: gsap.utils.unitize(wrap1) //force y value to wrap when it reaches -100
-            },
-            repeat: -1
-          });
-        
-        
-       
-        
-    }, { scope: ref });
-    return ( 
-        <div ref={ref} className='flex'>
-            <div className={styles.nav}>
-                <div className={styles.wrapper}>
-                    <div className={styles.boxes}>
-                        <div className={styles.box}>
-                            <img className={styles.img} src="/deep-img/ghibli-1.jpeg" alt=''  />
-                            <div className={styles.layer} />
-                        </div>
-                        <div className={styles.box}>
-                        <img className={styles.img} src="/deep-img/ghibli-2.jpeg" alt=''  />
-                        <div className={styles.layer} />
-                        </div>
-                        <div className={styles.box}>
-                            <img className={styles.img} src="/deep-img/ghibli-3.jpeg" alt=''  />
-                            <div className={styles.layer} />
-                        </div>
-                        <div className={styles.box}>
-                            <img className={styles.img} src="/deep-img/ghibli-4.webp" alt=''  />
-                            <div className={styles.layer} />
-                        </div>
-                        <div className={styles.box}>
-                        <img className={styles.img} src="/deep-img/ghibli-2.jpeg" alt=''  />
-                        <div className={styles.layer} />
-                        </div>
-                    </div>
-                </div>
-                <div className={styles.wrapper}>
-                    <div className={styles.boxes}>
-                        <div className={styles.box2}>
-                            <img className={styles.img} src="/deep-img/ghibli-3.jpeg" alt=''  />
-                            <div className={styles.layer} />
-                        </div>
-                        <div className={styles.box2}>
-                        <img className={styles.img} src="/deep-img/ghibli-4.webp" alt=''  />
-                        <div className={styles.layer} />
-                        </div>
-                        <div className={styles.box2}>
-                            <img className={styles.img} src="/deep-img/ghibli-1.jpeg" alt=''  />
-                            <div className={styles.layer} />
-                        </div>
-                        <div className={styles.box2}>
-                            <img className={styles.img} src="/deep-img/ghibli-3.jpeg" alt=''  />
-                            <div className={styles.layer} />
-                        </div>
-                        <div className={styles.box2}>
-                        <img className={styles.img} src="/deep-img/ghibli-2.jpeg" alt=''  />
-                        <div className={styles.layer} />
-                        </div>
-                    </div>
-                </div>
+      //initially colorize each box and position in a row
+      gsap.set(`.${styles.box}`, {
+        backgroundColor: (i) => colors[i % colors.length],
+        y: (i) => -100 + i * -200,
+      });
+      gsap.set(`.${styles.box2}`, {
+        backgroundColor: (i) => colors[i % colors.length],
+        y: (i) => i * 200,
+      });
+
+      gsap.to(`.${styles.box}`, {
+        duration: 15,
+        ease: 'none',
+        y: '-=1000', //move each box 500px to right
+        modifiers: {
+          y: gsap.utils.unitize(wrap), //force y value to wrap when it reaches -100
+        },
+        repeat: -1,
+      });
+
+      gsap.to(`.${styles.box2}`, {
+        duration: 15,
+        ease: 'none',
+        // delay: 2,
+        y: '+=1000', //move each box 500px to right
+        modifiers: {
+          y: gsap.utils.unitize(wrap1), //force y value to wrap when it reaches -100
+        },
+        repeat: -1,
+      });
+    },
+    { scope: ref }
+  );
+  return (
+    <div ref={ref} className="flex">
+      <div className={styles.nav}>
+        <div className={styles.wrapper}>
+          <div className={styles.boxes}>
+            <div className={styles.box}>
+              <img
+                className={styles.img}
+                src="/deep-img/ghibli-1.jpeg"
+                alt=""
+              />
+              <div className={styles.layer} />
             </div>
+            <div className={styles.box}>
+              <img
+                className={styles.img}
+                src="/deep-img/ghibli-2.jpeg"
+                alt=""
+              />
+              <div className={styles.layer} />
+            </div>
+            <div className={styles.box}>
+              <img
+                className={styles.img}
+                src="/deep-img/ghibli-3.jpeg"
+                alt=""
+              />
+              <div className={styles.layer} />
+            </div>
+            <div className={styles.box}>
+              <img
+                className={styles.img}
+                src="/deep-img/ghibli-4.webp"
+                alt=""
+              />
+              <div className={styles.layer} />
+            </div>
+            <div className={styles.box}>
+              <img
+                className={styles.img}
+                src="/deep-img/ghibli-2.jpeg"
+                alt=""
+              />
+              <div className={styles.layer} />
+            </div>
+          </div>
         </div>
-     );
-}
- 
-export default Homepage;
+        <div className={styles.wrapper}>
+          <div className={styles.boxes}>
+            <div className={styles.box2}>
+              <img
+                className={styles.img}
+                src="/deep-img/ghibli-3.jpeg"
+                alt=""
+              />
+              <div className={styles.layer} />
+            </div>
+            <div className={styles.box2}>
+              <img
+                className={styles.img}
+                src="/deep-img/ghibli-4.webp"
+                alt=""
+              />
+              <div className={styles.layer} />
+            </div>
+            <div className={styles.box2}>
+              <img
+                className={styles.img}
+                src="/deep-img/ghibli-1.jpeg"
+                alt=""
+              />
+              <div className={styles.layer} />
+            </div>
+            <div className={styles.box2}>
+              <img
+                className={styles.img}
+                src="/deep-img/ghibli-3.jpeg"
+                alt=""
+              />
+              <div className={styles.layer} />
+            </div>
+            <div className={styles.box2}>
+              <img
+                className={styles.img}
+                src="/deep-img/ghibli-2.jpeg"
+                alt=""
+              />
+              <div className={styles.layer} />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
+export default Homepage;

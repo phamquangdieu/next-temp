@@ -1,58 +1,56 @@
-
-
 .container {
-    height: 100vh;
-    text-transform: uppercase;
-    font-size: 8rem;
-    font-weight: bold;
-    display: flex;
-    flex-direction: column;
-    position: relative;
+  height: 100vh;
+  text-transform: uppercase;
+  font-size: 8rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .top {
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 .bottom {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
 }
 
 .topText {
-    position: absolute;
-    transform: translate(50%, 43%);
-    top: 50%;
-    left: 0;
+  position: absolute;
+  transform: translate(50%, 43%);
+  top: 50%;
+  left: 0;
 }
 
 .bottomText {
-    position: absolute;
-    transform: translate(50%, 43%);
-    top: -50%;
-    left: 0;
+  position: absolute;
+  transform: translate(50%, 43%);
+  top: -50%;
+  left: 0;
 }
 
 .container3 {
-    height: 100vh;
-    text-transform: uppercase;
-    font-size: 8rem;
-    font-weight: bold;
-    display: flex;
-    flex-direction: column;
-    background: linear-gradient(to top, #444, #fff );
+  height: 100vh;
+  text-transform: uppercase;
+  font-size: 8rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to top, #444, #fff);
 }
 
 .content {
-    /* top: 50%; */
-    text-align: center;
+  /* top: 50%; */
+  text-align: center;
 }

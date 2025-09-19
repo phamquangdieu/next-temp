@@ -1,20 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Signika+Negative:300,400&display=swap');
 
-.container { 
-  font-family: "Signika Negative", sans-serif; 
-  
+.container {
+  font-family: 'Signika Negative', sans-serif;
+
   padding: 0;
   margin: 0;
-  
-  background-color: grey;  
+
+  background-color: grey;
   height: 100%;
 }
 
 .initial {
-  
 }
-
-
 
 .pinUp {
   height: 100vh;
@@ -22,14 +19,12 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  
+
   background-color: green;
 }
 
-
-
-.contentWrap{
-  position:relative;
+.contentWrap {
+  position: relative;
   width: 333px;
   height: 222px;
   border-radius: 4px;
@@ -44,14 +39,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position:absolute;
+  position: absolute;
   background-color: limegreen;
   border-radius: 4px;
   font-size: 30px;
   color: white;
 }
-
-
 
 .sideline {
   position: absolute;
@@ -66,17 +59,15 @@
   z-index: 1;
 }
 
-
-
 .textWrap {
   height: 100vh;
   width: 333px;
   display: flex;
-  
+
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  
+
   background-color: green;
 }
 
@@ -87,17 +78,15 @@
   text-transform: uppercase;
   color: white;
   transform-origin: left center;
-  transform: rotate(0.1deg)
+  transform: rotate(0.1deg);
 }
-
-
 
 .below {
   height: 100vh;
 
   display: flex;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
   background-color: white;
 }
 
@@ -109,22 +98,19 @@
   transform: translateY(-50vh);
 }
 
-
-
 .footer {
   height: 5vh;
   display: flex;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
   background-color: lightgrey;
 }
-
 
 .spacer {
   height: 20vh;
   display: flex;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
   background: white;
 }
 
