@@ -21,7 +21,6 @@ const HorizontalScroll = () => {
           ease: 'none',
         });
 
-        // ScrollTrigger controlling the horizontal scroll
         ScrollTrigger.create({
           trigger: `.${styles.container}`,
           pin: true,
