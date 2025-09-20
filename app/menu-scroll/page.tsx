@@ -14,7 +14,7 @@ const MenuScroll = () => {
       gsap.set(`.${styles.content}:not(.${styles.initial})`, { autoAlpha: 0 });
       var headlines: HTMLDivElement[] = gsap.utils.toArray(`.${styles.text}`);
 
-      var totalDuration = 500;
+      var totalDuration = 2000;
       var singleDuration = totalDuration / headlines.length;
 
       const lineTimeline = gsap.timeline();
@@ -30,7 +30,7 @@ const MenuScroll = () => {
       });
 
       lineTimeline
-        .to(`.${styles.sideline}`, { duration: 1 }, 0)
+        // .to(`.${styles.sideline}`, { duration: 1 }, 0)
         .to(
           `.${styles.sideline}`,
           { duration: 0.9, scaleY: 1, ease: 'none' },
@@ -40,9 +40,9 @@ const MenuScroll = () => {
       headlines.forEach((elem, i) => {
         const smallTimeline = gsap.timeline();
 
-        const content = document.querySelector(`.${styles.contentWrap}`);
-        const relevantContent = content?.querySelector(`span.content-` + i);
-        console.log(content, relevantContent);
+        // const content = document.querySelector(`.${styles.contentWrap}`);
+        const relevantContent = document?.querySelector(`span.content-` + i);
+        // console.log(content, relevantContent);
 
         ScrollTrigger.create({
           trigger: '.wrapper',
@@ -50,7 +50,7 @@ const MenuScroll = () => {
           start: 'top -=' + singleDuration * i,
           end: '+=' + singleDuration,
 
-          //markers: true,
+          markers: true,
 
           animation: smallTimeline,
           toggleActions: relevantContent?.classList.contains(
