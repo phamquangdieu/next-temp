@@ -23,7 +23,7 @@ const MenuScroll = () => {
         trigger: `.${styles.pinUp}`,
         start: 'top top',
         end: '+=' + totalDuration,
-        markers: true,
+        // markers: true,
         pin: true,
         scrub: true,
         animation: lineTimeline,
